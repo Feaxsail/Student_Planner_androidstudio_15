@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.CalendarToday
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
@@ -22,6 +23,7 @@ fun HomeScreen(
     onSubjectClick: (String) -> Unit,
     onProfileClick: () -> Unit,
     onSettingsClick: () -> Unit,
+    onScheduleClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Scaffold(
@@ -29,6 +31,12 @@ fun HomeScreen(
             TopAppBar(
                 title = { Text("Студенческий планер") },
                 actions = {
+                    IconButton(onClick = onScheduleClick) {
+                        Icon(
+                            imageVector = Icons.Default.CalendarToday,
+                            contentDescription = "Расписание"
+                        )
+                    }
                     IconButton(onClick = onProfileClick) {
                         Icon(
                             imageVector = Icons.Default.Person,
@@ -124,3 +132,5 @@ fun SubjectCard(
         }
     }
 }
+
+// Я ХЗ КАК ЭТО ПОФИКСИТЬТ ВСЮ ГОЛОВУ ПЕРЕЛОМАЛ, GPT ТОЖЕ БРЕД ВЫДАЁТ ПОЛНЫЙ. Я ГОРЮ!!!
