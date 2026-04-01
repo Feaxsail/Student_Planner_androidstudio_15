@@ -1,0 +1,2 @@
+package com.shcherbakov.student_planner_androidstudio_15.ui_model
+
